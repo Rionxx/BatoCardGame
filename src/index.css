@@ -1,0 +1,160 @@
+/* 全体アニメーション定義。コンポーネント側は className を付けるだけで使える。 */
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 6px #ffb30066; }
+  50% { box-shadow: 0 0 16px #ffb300cc; }
+}
+
+@keyframes statPop {
+  0% { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+}
+
+/* キャラクターがふわふわ浮く */
+.portrait-bob { animation: floatY 3s ease-in-out infinite; }
+
+/* 手札: ドロー時にせり上がり、ホバーで持ち上がる */
+.hand-card {
+  animation: fadeInUp 0.3s ease both;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hand-card:not(:disabled):hover { transform: translateY(-6px) scale(1.04); }
+
+/* 場に出たカードがポンと出る */
+.field-card-pop { animation: popIn 0.35s cubic-bezier(0.2, 1.6, 0.4, 1) both; }
+
+/* オーバーレイ（チュートリアル・選択画面） */
+.overlay-bg { animation: fadeIn 0.25s ease both; }
+.overlay-panel { animation: popIn 0.3s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+
+/* 弱点カードの光る枠 */
+.weakness-pulse { animation: pulseGlow 1.6s ease-in-out infinite; }
+
+/* 対戦ログの新しい行 */
+.log-entry { animation: fadeInUp 0.25s ease both; }
+
+/* 誇り・怒りの数値が変わった瞬間に弾む */
+.stat-pop { display: inline-block; animation: statPop 0.35s ease both; }
+
+/* ターン終了ボタン */
+.end-turn-btn { transition: transform 0.12s ease, filter 0.12s ease; }
+.end-turn-btn:not(:disabled):hover { transform: translateY(-2px); filter: brightness(1.12); }
+
+/* VSマーク */
+.vs-wiggle { animation: wiggle 2.5s ease-in-out infinite; }
+
+/* 背景ステージの切り替えをなめらかに */
+.battle-root { transition: background 0.6s ease; }
+
+/* 勝利画面の紙吹雪 */
+@keyframes confettiFall {
+  0% { transform: translateY(-12vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0.6; }
+}
+.confetti-piece {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 16px;
+  border-radius: 2px;
+  animation: confettiFall linear infinite;
+  pointer-events: none;
+}
+
+/* 勝利タイトルの弾み */
+@keyframes victoryPop {
+  0% { transform: scale(0.4); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.victory-title { animation: victoryPop 0.6s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+
+/* ---- モバイル対応（横幅700px以下） ----
+   縦スクロールを減らすため、手札は横スクロールのカード帯にし、
+   フィールド情報をコンパクトにして「ターン終了」を画面下に固定表示する。 */
+@media (max-width: 700px) {
+  .battle-root {
+    padding: 10px !important;
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+  }
+  .battle-header h2 { font-size: 16px !important; }
+  .battle-header > div { gap: 6px !important; }
+  .battle-header button,
+  .battle-header > div > div {
+    font-size: 11px !important;
+    padding: 4px 8px !important;
+  }
+
+  /* フィールドをコンパクトに */
+  .field-zone { padding: 8px !important; gap: 8px !important; }
+  .field-zone .portrait-bob svg { width: 44px !important; height: 44px !important; }
+  .field-zone { font-size: 13px; }
+  .field-zone .card-art { width: 72px !important; height: 48px !important; }
+  .field-zone .card-art svg { width: 100% !important; height: 100% !important; }
+  .field-placeholder { width: 72px !important; height: 48px !important; }
+  .vs-wiggle { display: none; }
+
+  /* 手札: 横スクロールの帯にして縦の場所を取らない */
+  .hand-grid {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .hand-card {
+    flex: 0 0 168px;
+    width: 168px !important;
+    padding: 8px !important;
+  }
+  .hand-card .card-art { width: 100% !important; height: 84px !important; }
+  .hand-card .card-art svg { width: 100% !important; height: 100% !important; }
+  .hand-card > div { font-size: 12px !important; }
+  .hand-card-effects {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    max-height: 82px;
+    overflow-y: auto;
+  }
+  /* ホバー前提の持ち上げはタッチでは邪魔なので無効化 */
+  .hand-card:not(:disabled):hover { transform: none; }
+
+  /* ターン終了はいつでも押せるよう画面下に固定 */
+  .end-turn-btn {
+    position: sticky;
+    bottom: 8px;
+    z-index: 5;
+    margin-top: 10px !important;
+    padding: 14px 0 !important;
+    font-size: 17px !important;
+    box-shadow: 0 4px 16px #00000088;
+  }
+
+  .battle-log { max-height: 84px !important; }
+}

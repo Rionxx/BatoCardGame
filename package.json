@@ -1,0 +1,32 @@
+{
+  "name": "romaco-card-game",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "relay": "node server.mjs --relay-only",
+    "build": "tsc -b && vite build",
+    "start": "node server.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "simulate": "tsx scripts/simulateBalance.ts",
+    "sync:edge": "node scripts/syncEdgeCore.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}

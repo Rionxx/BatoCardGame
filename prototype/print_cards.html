@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>罵倒デッキ構築ゲーム 紙プロトタイプ 印刷用カード</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    background: #eee;
+    margin: 0;
+    padding: 12px;
+  }
+  .sheet {
+    display: grid;
+    grid-template-columns: repeat(3, 63mm);
+    gap: 4mm;
+    justify-content: center;
+  }
+  .card {
+    width: 63mm;
+    height: 88mm;
+    border: 1px solid #333;
+    border-radius: 3mm;
+    background: #fff;
+    padding: 3mm;
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .card.attack { border-top: 4mm solid #c0392b; }
+  .card.defense { border-top: 4mm solid #2980b9; }
+  .card.buff { border-top: 4mm solid #27ae60; }
+  .row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3.2mm;
+  }
+  .name {
+    font-size: 3.6mm;
+    font-weight: bold;
+    margin-top: 1mm;
+    line-height: 1.2;
+  }
+  .cost {
+    display: inline-block;
+    width: 6mm;
+    height: 6mm;
+    line-height: 6mm;
+    text-align: center;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3.4mm;
+  }
+  .attribute {
+    font-size: 2.6mm;
+    color: #666;
+    margin-top: 1mm;
+  }
+  .effect {
+    font-size: 2.8mm;
+    margin-top: 2mm;
+    flex-grow: 1;
+    line-height: 1.4;
+  }
+  .flavor {
+    font-size: 2.4mm;
+    color: #888;
+    font-style: italic;
+    border-top: 0.3mm dashed #ccc;
+    padding-top: 1mm;
+    margin-top: 1mm;
+  }
+  .type-label {
+    font-size: 2.4mm;
+    color: #999;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { gap: 0; }
+    .card { border: 0.2mm solid #999; }
+    .no-print { display: none; }
+    @page { size: A4; margin: 10mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="no-print" style="margin-bottom:8px;">
+  <button onclick="window.print()">印刷 / PDF出力</button>
+  <p>data/cards_draft.csv の内容をこのファイル内に直接埋め込んでいます（file://での印刷を安定させるため）。
+  カード内容を更新する場合は CSV とこの CARDS 配列の両方を編集してください。</p>
+</div>
+
+<div class="sheet" id="sheet"></div>
+
+<script>
+const TYPE_LABEL = { attack: "罵倒（攻撃）", defense: "受け流し（防御）", buff: "強化（バフ）" };
+
+const CARDS = [
+  { id:"A01", name:"挑発の流し目", type:"attack", attribute:"煽り", cost:1, effect:"誇りを3減らす。命中時、怒りを1獲得する。", flavor:"「へえ、それが精一杯？」" },
+  { id:"A02", name:"余裕ぶった鼻で笑い", type:"attack", attribute:"煽り", cost:1, effect:"誇りを2減らす。次に自分が出す攻撃カードのコストを1軽減する。", flavor:"鼻で笑われると、言葉より効く。" },
+  { id:"A03", name:"煽りの二段活用", type:"attack", attribute:"煽り", cost:2, effect:"誇りを5減らす。弱点属性が煽りの相手には追加で2減らす。", flavor:"一発目で怯ませ、二発目で刈り取る。" },
+  { id:"A04", name:"格付けマウント", type:"attack", attribute:"煽り", cost:2, effect:"誇りを4減らす。怒りを2獲得する。", flavor:"格の違いを、態度で見せつける。" },
+  { id:"A05", name:"正論パンチ", type:"attack", attribute:"正論", cost:1, effect:"誇りを3減らす。相手の防御カードの効果を1ターン無効化する。", flavor:"反論の余地がない一撃。" },
+  { id:"A06", name:"議事録の突きつけ", type:"attack", attribute:"正論", cost:2, effect:"誇りを6減らす。弱点属性が正論の相手には追加で2減らす。", flavor:"過去の発言を、そのまま突き返す。" },
+  { id:"A07", name:"データで殴る", type:"attack", attribute:"正論", cost:2, effect:"誇りを5減らす。次のターン、相手のコスト回復を1減らす。", flavor:"感情論では勝てない。" },
+  { id:"A08", name:"反論不可の一言", type:"attack", attribute:"正論", cost:1, effect:"誇りを2減らす。怒りを1獲得する。", flavor:"「で、それのどこが間違ってる？」" },
+  { id:"A09", name:"遠回しな嫌味", type:"attack", attribute:"皮肉", cost:1, effect:"誇りを3減らす。命中時、相手の次の手札を1枚見る。", flavor:"回りくどいほど、後から効いてくる。" },
+  { id:"A10", name:"褒め殺しの刃", type:"attack", attribute:"皮肉", cost:2, effect:"誇りを5減らす。弱点属性が皮肉の相手には追加で2減らす。", flavor:"褒めているようで、褒めていない。" },
+  { id:"A11", name:"皮肉の直球", type:"attack", attribute:"皮肉", cost:1, effect:"誇りを4減らす。", flavor:"遠回しをやめて、まっすぐ刺す。" },
+  { id:"A12", name:"含み笑いの一撃", type:"attack", attribute:"皮肉", cost:2, effect:"誇りを4減らす。怒りを2獲得する。", flavor:"笑いながら言うのが、一番効く。" },
+  { id:"A13", name:"自虐からのカウンター", type:"attack", attribute:"自虐からの逆転", cost:1, effect:"誇りを2減らす。自分の誇りを1回復する。", flavor:"自分を落として、相手の油断を刺す。" },
+  { id:"A14", name:"谷底からの這い上がり", type:"attack", attribute:"自虐からの逆転", cost:2, effect:"誇りを5減らす。弱点属性が自虐からの逆転の相手には追加で2減らす。", flavor:"底を見せた後の反撃は、深く刺さる。" },
+  { id:"A15", name:"傷口を晒す度胸", type:"attack", attribute:"自虐からの逆転", cost:1, effect:"誇りを3減らす。怒りを2獲得する。", flavor:"自分の弱さを晒せる者は、案外強い。" },
+  { id:"A16", name:"逆境ブースト", type:"attack", attribute:"自虐からの逆転", cost:2, effect:"誇りを4減らす。自分の誇りが半分以下なら追加で3減らす。", flavor:"追い詰められてからが本番。" },
+  { id:"D01", name:"軽くいなす", type:"defense", attribute:"", cost:1, effect:"次の相手の攻撃ダメージを3軽減する。", flavor:"「はいはい、そうですね」" },
+  { id:"D02", name:"笑って受け流す", type:"defense", attribute:"", cost:1, effect:"次の相手の攻撃ダメージを2軽減する。怒りを1獲得する。", flavor:"笑顔は最大の防御になる。" },
+  { id:"D03", name:"話をすり替える", type:"defense", attribute:"", cost:2, effect:"次の相手の攻撃を1回無効化する。", flavor:"論点をずらせば、傷は負わない。" },
+  { id:"D04", name:"無言の圧", type:"defense", attribute:"", cost:1, effect:"次の相手の攻撃ダメージを2軽減する。相手の怒り上昇を1抑える。", flavor:"何も言わないことが、一番効く時がある。" },
+  { id:"B01", name:"深呼吸で冷静に", type:"buff", attribute:"", cost:1, effect:"自分の誇りを3回復する。", flavor:"頭を冷やせば、次の一手が見える。" },
+  { id:"B02", name:"場の空気を読む", type:"buff", attribute:"", cost:1, effect:"相手の弱点属性のヒントを1つ追加で見る。", flavor:"観察こそが、勝負の半分。" },
+  { id:"B03", name:"机上の資料を整える", type:"buff", attribute:"", cost:2, effect:"次のターンのコストを1増やす。", flavor:"武器は、事前に整えておくものだ。" },
+  { id:"B04", name:"怒りを飲み込む", type:"buff", attribute:"", cost:1, effect:"怒りを2獲得する。ただし自分の誇りを1減らす。", flavor:"溜め込んだ怒りは、いずれ牙になる。" }
+];
+
+const sheet = document.getElementById("sheet");
+for (const c of CARDS) {
+  const el = document.createElement("div");
+  el.className = "card " + c.type;
+  el.innerHTML = `
+    <div class="row-top">
+      <span class="type-label">${TYPE_LABEL[c.type]}</span>
+      <span class="cost">${c.cost}</span>
+    </div>
+    <div class="name">${c.name}</div>
+    ${c.attribute ? `<div class="attribute">属性: ${c.attribute}</div>` : ""}
+    <div class="effect">${c.effect}</div>
+    <div class="flavor">${c.flavor}</div>
+  `;
+  sheet.appendChild(el);
+}
+</script>
+
+</body>
+</html>

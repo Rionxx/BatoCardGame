@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.log
+.env
+.env.local
+# npm run sync:edge が生成するコピー（正はsrc/core）
+supabase/functions/_shared/core/
