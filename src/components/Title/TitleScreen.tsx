@@ -38,7 +38,7 @@ export function TitleScreen() {
       </div>
 
       <h1 style={{ fontSize: 36, margin: 0, textAlign: "center", textShadow: "0 2px 12px #00000088" }}>
-        罵倒デッキ構築
+        罵倒デュエルカードバトル
       </h1>
       <p style={{ opacity: 0.8, marginTop: 4, marginBottom: 40 }}>〜言葉で挑む、カードバトル〜</p>
 

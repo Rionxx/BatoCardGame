@@ -599,16 +599,16 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       rivalId: "shingo",
       lines: [
         { speakerId: "shingo", line: "ロマ子様、今日も配信見てるぶひ！罵倒が冴えてるぶひ！" },
-        { speakerId: "romako", line: "当然なのらわ。アンタたちマゾ豚のために言ってやってるのよ。へーんだ！" },
+        { speakerId: "romako", line: "当然なのらわ。おめぇらマゾ豚のために言ってやってるのら。へーんだ！" },
         { speakerId: "shingo", line: "ご褒美ぶひぃ！！……あれ、僕いま罵倒されたぶひ？" },
       ],
     },
     2: {
       rivalId: "take",
       lines: [
-        { speakerId: "take", line: "ロマ子様も大会出るの！？じゃあ俺、決勝でロマ子様とのデートを賭けて戦うよ！" },
-        { speakerId: "romako", line: "誰がデートなんかするのらわ！！身の程を知りなさい！" },
-        { speakerId: "take", line: "照れてる照れてる〜。決勝で待ってるからね！" },
+        { speakerId: "take", line: "ロマ子様も大会出るですか！？じゃあたけさんも決勝でロマ子様とのデートを賭けて戦うよ！" },
+        { speakerId: "romako", line: "誰がおめぇなんかとデートするんだよ！！ほんと気色悪りぃな！" },
+        { speakerId: "take", line: "ほいでね、ロマ子様。僕とデートするとあんなことやこんなことができるプキーン！！" },
       ],
     },
     3: {
@@ -623,17 +623,17 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     4: {
       rivalId: "garyu",
       lines: [
-        { speakerId: "garyu", line: "……今の一言で、場の空気が変わったな。" },
-        { speakerId: "romako", line: "当然なのら。女王の本気、見せてあげただけなのらわ。" },
-        { speakerId: "garyu", line: "面白い。その覚醒とやら、この眼で確かめさせてもらおう。" },
+        { speakerId: "garyu", line: "……今の一言で、場の空気が変わったな。ロマ子、俺と勝負だ" },
+        { speakerId: "romako", line: "おめぇなんか一握りでぶち落としてやるのらわ！へーんだ！！" },
+        { speakerId: "garyu", line: "面白い。臥龍拳法の力見せてやる" },
       ],
     },
     5: {
       rivalId: "rion",
       lines: [
-        { speakerId: "rion", line: "ロマ子さん、次の挑戦者は僕です。作った側の意地、見せますよ。" },
-        { speakerId: "romako", line: "作った側だろうが何だろうが、玉座の前では皆マゾ豚なのらわ！へーんだ！" },
-        { speakerId: "rion", line: "……その台詞、実装した僕が言われると複雑だなあ。" },
+        { speakerId: "rion", line: "ロマ子、次の挑戦者は俺だ。このゲームを支配し、俺の奴隷になれ。" },
+        { speakerId: "romako", line: "誰がおめぇなんかの奴隷になるんだよ。決勝でぶち落としてやんかんな！へーんだ！？" },
+        { speakerId: "rion", line: "なるほど、決勝行って浮かれてるやつ大体ロマ子ってか？俺がぶち落としてやるぜ" },
       ],
     },
   },
@@ -642,9 +642,9 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     1: {
       rivalId: "baku",
       lines: [
-        { speakerId: "baku", line: "BG、今日は何して過ごすの……？" },
-        { speakerId: "bg", line: "何も決めてないぶひ。気づいたら夜になってるぶひ。" },
-        { speakerId: "baku", line: "僕たち、気が合うね……たぶん……。" },
+        { speakerId: "baku", line: "BGトン、今日は何して過ごすの……？" },
+        { speakerId: "bg", line: "何も決めてないぶひ。ゲームしすぎて気づいたら夜になってるぶひ。" },
+        { speakerId: "baku", line: "なるほど、僕たち、気が合うね。（気づいたら夜ってアホなのかな？）" },
       ],
     },
     2: {
@@ -652,7 +652,7 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "shingo", line: "BGトン、大会エントリーしといたぶひ！感謝するぶひ！" },
         { speakerId: "bg", line: "ブヒー！ありがとうございます〜❤️ ……で、何の大会ぶひ？" },
-        { speakerId: "shingo", line: "聞いてなかったのかよ！罵倒デッキ構築大会だぶひ！" },
+        { speakerId: "shingo", line: "聞いてなかったのかよ！このアホ豚！罵倒デッキ構築大会だぶひ！" },
       ],
     },
     3: {
@@ -661,23 +661,23 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
         { speakerId: "teruzo", line: "BGって、何を言われても効かないよね。俺なんてさ全部刺さっちゃうのに。" },
         { speakerId: "bg", line: "ん？なんか言ったぶひ？" },
         { speakerId: "teruzo", line: "……ほら、その鈍感さだよ。でもね、追い込まれてからの僕はだいぶしぶといよ。" },
-        { speakerId: "bg", line: "じゃあ追い込んでみるぶひ。" },
+        { speakerId: "bg", line: "じゃあ追い込んでみるぶひ。（ぺろぺろぺろぺろ）" },
       ],
     },
     4: {
       rivalId: "uemu",
       lines: [
-        { speakerId: "uemu", line: "BGさんの主張は論理が飛躍しています。前提から説明してください。" },
-        { speakerId: "bg", line: "課金は正義ぶひ。以上ぶひ。" },
-        { speakerId: "uemu", line: "結論しかない……だが、なぜか反論できない……！" },
+        { speakerId: "uemu", line: "BGの主張は論理が飛躍しているぶひ。前提から説明しろぶひ。" },
+        { speakerId: "bg", line: "課金は正義ぶひ。まぁこれで僕のお金は0円ぶひ" },
+        { speakerId: "uemu", line: "へ！ダッセェな！BGなんかうえむのボコボコラッシュで終わらせるぶひ" },
       ],
     },
     5: {
       rivalId: "romako",
       lines: [
-        { speakerId: "romako", line: "アンタ、最近調子に乗ってるらしいわね。女王自ら試してあげるのらわ。" },
+        { speakerId: "romako", line: "おめぇ最近調子に乗ってるらしいじゃねぇか。ロマ子様が直々に相手してやるのら" },
         { speakerId: "bg", line: "ロマ子様に罵倒してもらえるなんてご褒美ぶひ〜❤️" },
-        { speakerId: "romako", line: "マゾ豚に罵倒は効かないのかしら……厄介なのらわ。" },
+        { speakerId: "romako", line: "げぇ！気色悪りぃ。勝手にブヒってんじゃねぇぞ" },
       ],
     },
   },
@@ -686,9 +686,9 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     1: {
       rivalId: "take",
       lines: [
-        { speakerId: "take", line: "しんごトン、また赤信号にキレてたでしょ。顔に出てたよ。" },
+        { speakerId: "take", line: "しんごさん、また赤信号にキレてたでしょ。ほいでね顔に出てたよ。" },
         { speakerId: "shingo", line: "うるさいぶひ！たけちゃんこそ考える前に喋りすぎだぶひ！" },
-        { speakerId: "take", line: "お互い様ってことで、今日も仲良く言い合いしよ！" },
+        { speakerId: "take", line: "ほいでねお互い様ってことで、ほいでね今日も仲良く言い合いしよ！" },
       ],
     },
     2: {
@@ -696,7 +696,7 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "uemu", line: "しんごさん、例の大会のルールブック、要点をまとめておきました。" },
         { speakerId: "shingo", line: "うえむトン、ありがとうぶひ！でも読む前に体が動いちまうぶひ！" },
-        { speakerId: "uemu", line: "……せめて勝利条件だけでも読んでください。" },
+        { speakerId: "uemu", line: "……せめて勝利条件だけでも読んで欲しいな。ま、しんごなら楽勝だな" },
       ],
     },
     3: {
@@ -711,8 +711,8 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     4: {
       rivalId: "romako",
       lines: [
-        { speakerId: "romako", line: "アンタ、ロマ子様を想像してスッキリしてるってどういうことなのらわ！？" },
-        { speakerId: "shingo", line: "ほ、本人登場ぶひ！？でも事実だからしょうがないぶひ！" },
+        { speakerId: "romako", line: "おめぇ、ロマ子様のことを想像してスッキリしてるってどういうことなのらわ！？" },
+        { speakerId: "shingo", line: "ほ、本人登場ぶひ！？でも事実だからしょうがないぶひ！あああああぁぁ、スッキリー！！" },
         { speakerId: "romako", line: "たっく、気色悪りぃ！！ぶちのめしてやんわ！！" },
       ],
     },
@@ -721,7 +721,7 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "shingo", line: "BGトン、今度は僕が誘う番だぶひ。一緒に大会出るぶひ！" },
         { speakerId: "bg", line: "めんどくさいぶひ……でもしんごトンが言うなら出るぶひ。" },
-        { speakerId: "shingo", line: "その意気だぶひ！まずは僕と練習試合だぶひ！" },
+        { speakerId: "shingo", line: "その意気だぶひ！まずは僕と練習試合だぶひ！うぉおおおおお！" },
       ],
     },
   },
@@ -730,26 +730,26 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     1: {
       rivalId: "baku",
       lines: [
-        { speakerId: "baku", line: "Hisaといると、しゃべらなくていいから楽だなあ……。" },
+        { speakerId: "baku", line: "Hisaトンといると、しゃべらなくていいから楽だなあ……。" },
         { speakerId: "hisa", line: "……（頷く）" },
-        { speakerId: "baku", line: "……この沈黙、心地いいね。じゃ、対戦しよっか。" },
+        { speakerId: "baku", line: "……この沈黙、心地いいぶひ。じゃ、対戦するぶひ。" },
       ],
     },
     2: {
       rivalId: "sachiyo",
       lines: [
         { speakerId: "sachiyo", line: "あら、Hisaちゃんもエントリー？書き方がわからなかったら言ってね。" },
-        { speakerId: "hisa", line: "……（記入済みのエントリーシートを差し出す）" },
+        { speakerId: "hisa", line: "あげるぶひ..." },
         { speakerId: "sachiyo", line: "もう書けてるのね。手際が良くてえらいえらい。" },
       ],
     },
     3: {
       rivalId: "mito",
       lines: [
-        { speakerId: "mito", line: "Hisaの沈黙、点数で言うと8点。怖さはあるけど、言葉が足りない。" },
+        { speakerId: "mito", line: "Hisaの沈黙、点数で言うと8点ぶひ。怖さはあるけど、言葉が足りないな。" },
         { speakerId: "hisa", line: "……。" },
-        { speakerId: "mito", line: "ほら、その沈黙。減点しづらいんだよね、実際。" },
-        { speakerId: "hisa", line: "（じっと見つめている）" },
+        { speakerId: "mito", line: "ほら、その沈黙。変態な私はワクワクしないなぁ" },
+        { speakerId: "hisa", line: "（目を大きく開きながら、じっっくり見つめている）" },
       ],
     },
     4: {
@@ -757,15 +757,15 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "garyu", line: "……。" },
         { speakerId: "hisa", line: "……。" },
-        { speakerId: "garyu", line: "（今のは効いたな）……語らずして語るか。良い眼だ。" },
+        { speakerId: "garyu", line: "相変わらず喋らない豚だな。これにて勝負ぶひ！" },
       ],
     },
     5: {
       rivalId: "picco",
       lines: [
-        { speakerId: "picco", line: "Hisaさん、無言はずるいって！こっちのペースが乱れる〜！" },
+        { speakerId: "picco", line: "Hisaトン、無言はずるいって！こっちのペースが乱れるぶひ〜！" },
         { speakerId: "hisa", line: "……（少し口角が上がる）" },
-        { speakerId: "picco", line: "あっ、今笑った！絶対わざとだ！勝負！" },
+        { speakerId: "picco", line: "あっ、今笑ったぶひ！絶対わざとぶひ！勝負ぶひ！" },
       ],
     },
   },
@@ -775,16 +775,16 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       rivalId: "picco",
       lines: [
         { speakerId: "picco", line: "たけちゃん、今日も口が早いね！でも足はボクのが早いよ！" },
-        { speakerId: "take", line: "口の早さで勝負しろって！よーいドン！" },
-        { speakerId: "picco", line: "もう始まってる！？" },
+        { speakerId: "take", line: "あのね、たけさんは最強だからそんなの関係ありませんよ！" },
+        { speakerId: "picco", line: "どこが最強ぶひ？老耄マゾ豚なんか楽勝ぶひ！" },
       ],
     },
     2: {
       rivalId: "teruzo",
       lines: [
-        { speakerId: "take", line: "てるぞーさん、一緒に大会出よう！絶対楽しいって！" },
-        { speakerId: "teruzo", line: "べ、別に興味ないけど……暇だから付き合ってやるよ。" },
-        { speakerId: "take", line: "その照れ方、興味あるやつだ！" },
+        { speakerId: "take", line: "てるぞーさん、一緒に大会出ましょうよ！ほいでね絶対楽しいって！" },
+        { speakerId: "teruzo", line: "べ、別に興味ないんだけどさ……暇だから付き合ってやるよ。" },
+        { speakerId: "take", line: "やったー、てるぞーさんと勝負ぶひ！ほいでねほいでねほいでねほいでね" },
       ],
     },
     3: {
@@ -793,15 +793,15 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
         { speakerId: "teruzo", line: "あれ？たけちゃんじゃん！こんなところで何にしてるの？" },
         { speakerId: "take", line: "てるぞーさんじゃないですか。ロマ子様とデートのために大会に出てるんですよ" },
         { speakerId: "teruzo", line: "いやぁ、たけちゃんじゃ無理だよ。多分俺にも勝てないよ" },
-        { speakerId: "take", line: "プキーン！てるぞーさん！たけさんと勝負ブヒ！" },
+        { speakerId: "take", line: "プキーン！てるぞーさん！たけさんと勝負ぶひ！" },
       ],
     },
     4: {
       rivalId: "shingo",
       lines: [
         { speakerId: "shingo", line: "たけちゃん、この前のリベンジに来たぶひ！" },
-        { speakerId: "take", line: "何回来ても同じだよ！俺の瞬発力は今日も絶好調！" },
-        { speakerId: "shingo", line: "その自信ごと叩き折ってスッキリするぶひ！" },
+        { speakerId: "take", line: "しんごさんじゃないですか。あれ？しんごって誰だ？" },
+        { speakerId: "shingo", line: "ブッヒーー！もう怒ったぶひ！覚悟しろぶひ！！" },
       ],
     },
     5: {
@@ -809,7 +809,7 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "take", line: "ロマ子様！優勝したらデートの約束、覚えてるよね！" },
         { speakerId: "romako", line: "約束した覚えは一切ないのらわ！！寝言は寝て言いなさい！" },
-        { speakerId: "take", line: "じゃあ勝って現実にするだけだね！" },
+        { speakerId: "take", line: "ぷきーん！ほいでね、勝って現実にするだけだね！ぺろぺろぺろぺろ" },
       ],
     },
   },
@@ -819,41 +819,41 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       rivalId: "sachiyo",
       lines: [
         { speakerId: "sachiyo", line: "てるぞーちゃん、今日の服も似合ってるわねえ。えらいえらい。" },
-        { speakerId: "teruzo", line: "べ、別に普通だし……褒めても何も出ないし……。" },
-        { speakerId: "sachiyo", line: "照れてるのもかわいいわねえ。" },
+        { speakerId: "teruzo", line: "べ、別に普通だし……褒めても何も出ないだぴょーん" },
+        { speakerId: "sachiyo", line: "照れてるのもかわいいわねえ。さちよ姉さんがハグしてあ・げ・る❤️" },
       ],
     },
     2: {
       rivalId: "take",
       lines: [
-        { speakerId: "take", line: "てるぞーさん、エントリー用紙持ってきたよ！はいペン！" },
-        { speakerId: "teruzo", line: "押し付けるなって……まあ、書くけどさ。" },
-        { speakerId: "take", line: "書くんだ！" },
+        { speakerId: "take", line: "てるぞーさん、エントリー用紙持ってきましたよ！ぺろぺろぺろ" },
+        { speakerId: "teruzo", line: "たけちゃんさぁ、そんなこと言ったらロマ子様に嫌われるぶひよ？" },
+        { speakerId: "take", line: "ぷきーん！ロマ子様と！ロマ子様とデートいくぶひ！！" },
       ],
     },
     3: {
       rivalId: "mito",
       lines: [
-        { speakerId: "mito", line: "てるぞーの照れ隠し、演技力は2点。バレバレだよ。" },
-        { speakerId: "teruzo", line: "べ、別に隠してないし。照れてもないし。" },
-        { speakerId: "mito", line: "その反応込みで7点に修正。おもしろいから。" },
-        { speakerId: "teruzo", line: "採点やめろ！　……対戦で黙らせてやる。" },
+        { speakerId: "mito", line: "てるぞーの照れ隠し、演技力は2点。バレバレだよ。アハン❤️" },
+        { speakerId: "teruzo", line: "べ、別に隠してないし。照れてもないし。あと最後のやつ何？" },
+        { speakerId: "mito", line: "その反応込みで7点に修正だね！変態っぷりを見せてあ・げ・る❤️" },
+        { speakerId: "teruzo", line: "やばい、興奮してきたぶひ。ところでデート行かない？" },
       ],
     },
     4: {
       rivalId: "mito",
       lines: [
-        { speakerId: "mito", line: "照れ隠しが必殺技になるとはね。発想は9点。" },
-        { speakerId: "teruzo", line: "て、point稼ぎに来たわけじゃないし……でも9点は悪くないな。" },
-        { speakerId: "mito", line: "素直になったら10点あげる。" },
+        { speakerId: "mito", line: "照れ隠しが必殺技になるとはね。発想は9点。変態度は90点。" },
+        { speakerId: "teruzo", line: "て、point稼ぎに来たわけじゃないし……あと変態度って何？" },
+        { speakerId: "mito", line: "ふふ❤️可愛らしい豚ちゃんね" },
       ],
     },
     5: {
       rivalId: "hisa",
       lines: [
-        { speakerId: "teruzo", line: "Hisaさんは静かでいいよな。俺みたいに口で損しないし。" },
+        { speakerId: "teruzo", line: "Hisaトンは静かでいいぶひね。俺みたいに口で損しないし。" },
         { speakerId: "hisa", line: "……（首を横に振る）" },
-        { speakerId: "teruzo", line: "『そのままでいい』って？……べ、別に嬉しくないし！" },
+        { speakerId: "teruzo", line: "まぁ決勝で戦うから、全力で戦うぶひね！" },
       ],
     },
   },
@@ -862,42 +862,42 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     1: {
       rivalId: "mito",
       lines: [
-        { speakerId: "mito", line: "りおんの観察眼、85点。ただし自分のことは見えてない。" },
-        { speakerId: "rion", line: "うっ、それ一番言われたくないやつ……。" },
-        { speakerId: "mito", line: "自覚があるなら90点に上げよう。対戦で確かめる？" },
+        { speakerId: "mito", line: "りおんくん❤️" },
+        { speakerId: "rion", line: "あ、変な妄想をしてるやつだいたいみとちゃん" },
+        { speakerId: "mito", line: "もぉ何よ〜。私が勝負してあ・げ・る❤️" },
       ],
     },
     2: {
       rivalId: "bg",
       lines: [
-        { speakerId: "rion", line: "BG、テストプレイ付き合ってくれてありがとう。バグあった？" },
-        { speakerId: "bg", line: "気づいたら全カードを課金で揃えたくなったぶひ。良いゲームぶひ。" },
-        { speakerId: "rion", line: "課金要素ないんだけど！？" },
+        { speakerId: "rion", line: "BGさん、テストプレイ付き合ってくれてありがとう。バグあった？" },
+        { speakerId: "bg", line: "気づいたら全カードを課金で揃えたくなったぶひ。これでゲームしまくるびひ。" },
+        { speakerId: "rion", line: "課金要素ないんだけど！？もしかしてアホマゾ豚かな？" },
       ],
     },
     3: {
       rivalId: "garyu",
       lines: [
         { speakerId: "garyu", line: "（じっとりおんを見ている）" },
-        { speakerId: "rion", line: "うっ……見透かされてる気がする……。" },
-        { speakerId: "garyu", line: "目は口ほどに物を言う。お前の迷いも、な。" },
-        { speakerId: "rion", line: "でも、追い込まれてからが僕の本番ですから。" },
+        { speakerId: "rion", line: "うっ……誰かに見透かされてる気がするな……。" },
+        { speakerId: "garyu", line: "目は口ほどに物を言うぶひ。お前の迷いも、な。" },
+        { speakerId: "rion", line: "でも、追い込まれてからが俺の本番ですから。あ、またクレームだ" },
       ],
     },
     4: {
       rivalId: "uemu",
       lines: [
-        { speakerId: "uemu", line: "『追い込まれてからが本番』——非合理的ですが、データ上、実際に強い。" },
-        { speakerId: "rion", line: "でしょ？理屈じゃないんだよね、これ。" },
-        { speakerId: "uemu", line: "では、その再現性を理屈で検証させてください。対戦で。" },
+        { speakerId: "uemu", line: "さて、どっちが強いか勝負ぶひ。そういえばロマ子が新大阪で💩してたぶひ" },
+        { speakerId: "rion", line: "ほんとですか！？よし、メモしておきますね！" },
+        { speakerId: "uemu", line: "では、どっちが決勝に行けるか勝負だ！" },
       ],
     },
     5: {
       rivalId: "romako",
       lines: [
-        { speakerId: "romako", line: "このゲーム、ロマ子様の魅力が3割も出せてないのらわ。作り直しなさい！" },
-        { speakerId: "rion", line: "手厳しいなあ……じゃあ、勝ったら要望を聞きますよ。" },
-        { speakerId: "romako", line: "言ったわね？決闘なのらわ！！" },
+        { speakerId: "romako", line: "おめぇと勝負なのかよ！しつけぇったらありゃしねぇわ" },
+        { speakerId: "rion", line: "新大阪で💩してるやつ大体ロマ子。（ガチの真顔）" },
+        { speakerId: "romako", line: "そんなことしてねぇわ！！ぜってーぶち落としてやんわ！！" },
       ],
     },
   },
@@ -914,34 +914,34 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     2: {
       rivalId: "picco",
       lines: [
-        { speakerId: "picco", line: "バク！エントリー締切、今日までだよ！急いで急いで！" },
-        { speakerId: "baku", line: "え……今日……？　まあ、間に合えばいいか……。" },
-        { speakerId: "picco", line: "その速度で間に合うわけないでしょ！ボクが引っ張ってく！" },
+        { speakerId: "picco", line: "バクトン！似たもの同士だけどどっちが強いか勝負ぶひ！" },
+        { speakerId: "baku", line: "え、僕たちって似たもの同士ぶひ？めんどくせぇな" },
+        { speakerId: "picco", line: "そうなこと言うなぶひ！とりあえずやるぶひ！" },
       ],
     },
     3: {
       rivalId: "rion",
       lines: [
-        { speakerId: "rion", line: "バクって、ぼんやりしてるようで実は全部見えてるでしょ。" },
-        { speakerId: "baku", line: "ん……今、何か言った？" },
-        { speakerId: "rion", line: "ほらそれ！その一拍が読めないんだよなあ。" },
-        { speakerId: "baku", line: "君の次の一手なら、もう食べちゃったけど。" },
+        { speakerId: "rion", line: "バクさんって、ぼんやりしてるようで実はロマ子のパンツも見えてるでしょ。" },
+        { speakerId: "baku", line: "え、え、あ、あ、あ、ぶひーーーーーん！！" },
+        { speakerId: "rion", line: "ほらそれ！隠す気ゼロですやん" },
+        { speakerId: "baku", line: "ちっ、仕方ないか。ロマ子様のパンツをかけて勝負ぶひ！" },
       ],
     },
     4: {
       rivalId: "garyu",
       lines: [
-        { speakerId: "garyu", line: "先を読む眼か。若いのに、良い眼をしている。" },
+        { speakerId: "garyu", line: "千里眼！？まさかそんな力を持っているのか？" },
         { speakerId: "baku", line: "臥龍さんの次の一手も……もう食べちゃいました。" },
-        { speakerId: "garyu", line: "ほう。ならば読み合いといこう。" },
+        { speakerId: "garyu", line: "ちょっと何言ってるかわからない。まぁ勝負するしかないか" },
       ],
     },
     5: {
       rivalId: "mito",
       lines: [
-        { speakerId: "mito", line: "バクの対戦、採点しようとすると毎回基準が壊れる。何なの。" },
+        { speakerId: "mito", line: "バクくんの対戦、カードじゃなくて夜の対戦しようよ❤️" },
         { speakerId: "baku", line: "ん……今、何か言った……？" },
-        { speakerId: "mito", line: "その反応も込みで採点不能。もう一回見せて。" },
+        { speakerId: "mito", line: "その反応も隠しきれてないよ❤️" },
       ],
     },
   },
@@ -952,7 +952,7 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "shingo", line: "さちよさん、聞いてくれぶひ！また赤信号に負けたぶひ！" },
         { speakerId: "sachiyo", line: "あらあら。ちゃんと信号を待てたのねえ、えらいえらい。" },
-        { speakerId: "shingo", line: "待っただけで褒められたぶひ！？" },
+        { speakerId: "shingo", line: "待っただけで褒められたぶひ！？スッキリしたいぶひ！" },
       ],
     },
     2: {
@@ -960,32 +960,32 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
       lines: [
         { speakerId: "sachiyo", line: "Hisaちゃんも出るなら、私も出ようかしらねえ。" },
         { speakerId: "hisa", line: "……（こくり）" },
-        { speakerId: "sachiyo", line: "決まりね。お互い頑張りましょうねえ。" },
+        { speakerId: "sachiyo", line: "決まりね。お互い頑張ろうねぇ。" },
       ],
     },
     3: {
       rivalId: "romako",
       lines: [
-        { speakerId: "romako", line: "甘いのよ、さちよ。優しさじゃ誇りは守れないわ。" },
+        { speakerId: "romako", line: "さちよちゃん！セクシーさで負けてしまうのら" },
         { speakerId: "sachiyo", line: "あらあら。でもね、ロマ子ちゃんも毎日頑張っててえらいえらい。" },
-        { speakerId: "romako", line: "なっ……女王を子ども扱いしないでちょうだい！" },
+        { speakerId: "romako", line: "ロマ子様だかんな！セクシーさで勝って自慢してんじゃねぇぞ！" },
         { speakerId: "sachiyo", line: "はいはい、ちゃんと怒れるのもえらいえらい。" },
       ],
     },
     4: {
       rivalId: "take",
       lines: [
-        { speakerId: "take", line: "さちよさんの包容力、逆に怖いんだけど！罵倒が全部吸われる！" },
-        { speakerId: "sachiyo", line: "たけちゃんの元気な罵倒、今日もえらいえらい。" },
-        { speakerId: "take", line: "くっ……勝てる気がしない……でもやるしかない！" },
+        { speakerId: "take", line: "さちよさん、僕とデートしましょうよ。あ、ロマ子様も連れていこ！" },
+        { speakerId: "sachiyo", line: "たけちゃんとデート行くの？一緒にロマ子ハウスでイチャイチャしよ？" },
+        { speakerId: "take", line: "ぷきーん！ほいでね、ほいでね、ほいでね、ほいでねぇぇぇ！！" },
       ],
     },
     5: {
       rivalId: "uemu",
       lines: [
-        { speakerId: "uemu", line: "さちよさんの『えらいえらい』には、論理的な反論が不可能です。" },
-        { speakerId: "sachiyo", line: "うえむちゃんは難しく考えられてえらいえらい。" },
-        { speakerId: "uemu", line: "……ほら。こうなる。せめて対戦では全力でお願いします。" },
+        { speakerId: "uemu", line: "さちよさんってなんでそんなにセクシーなの？" },
+        { speakerId: "sachiyo", line: "うえむちゃんはちゃんと見る目があってえらいえらい。" },
+        { speakerId: "uemu", line: "え、たったこれだけで？おっふ❤️" },
       ],
     },
   },
@@ -994,9 +994,9 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     1: {
       rivalId: "mito",
       lines: [
-        { speakerId: "uemu", line: "みとさん、その採点の評価基準を文書化しませんか。" },
-        { speakerId: "mito", line: "基準は気分。以上。" },
-        { speakerId: "uemu", line: "最悪だ……しかし興味深い。検証させてください。" },
+        { speakerId: "uemu", line: "みとさん、僕とデートしませんか？あ、もちろんみとさんの奢りで" },
+        { speakerId: "mito", line: "えぇ、奢るのは無理かなぁ。あ、他のことなら大丈夫だよ❤️" },
+        { speakerId: "uemu", line: "え、他のこと？まさか、、、ブッヒ！！" },
       ],
     },
     2: {
@@ -1010,30 +1010,30 @@ export const CHAPTER_ENCOUNTERS: Record<string, Record<number, ChapterEncounter>
     3: {
       rivalId: "bg",
       lines: [
-        { speakerId: "uemu", line: "BGさん、あなたの主張には前提が3つ抜けています。" },
-        { speakerId: "bg", line: "そんなの関係ないぶひ。事実はひとつだけぶひ。" },
-        { speakerId: "uemu", line: "……シンプルすぎて逆に反論しづらい。" },
-        { speakerId: "bg", line: "無駄な理屈は、防御ごと吹き飛ばすぶひ！" },
+        { speakerId: "uemu", line: "BGか、こいつは正直話にならないからな" },
+        { speakerId: "bg", line: "ん？何か言ったぶひ？あれ？このあと何するぶひ？" },
+        { speakerId: "uemu", line: "え？こんなアホなマゾ豚だっけ？BGは？" },
+        { speakerId: "bg", line: "そうだよ！アホぶひ〜！ゲームしすぎたアホぶひ〜" },
       ],
     },
     4: {
       rivalId: "rion",
       lines: [
-        { speakerId: "rion", line: "うえむの理詰め、完成度上がったね。設計者としても感心するよ。" },
-        { speakerId: "uemu", line: "恐縮です。ですが、まだ検証項目が残っています——あなたです。" },
-        { speakerId: "rion", line: "僕はデータにないよ？" },
+        { speakerId: "rion", line: "うえむさんの理詰め、完成度上がったね。設計者としても感心するぜ" },
+        { speakerId: "uemu", line: "いやぁ、理詰めをしたおかげでロマ子のパンツを見れたぶひ" },
+        { speakerId: "rion", line: "マジっすか！？これはメモしておかないと。このあと勝負しませんか？" },
       ],
     },
     5: {
       rivalId: "shingo",
       lines: [
         { speakerId: "shingo", line: "うえむトン、あの時ルールを教えてくれてありがとうぶひ！" },
-        { speakerId: "uemu", line: "読まずに勝ち続けるのは、正直、理屈に合わないのですが。" },
-        { speakerId: "shingo", line: "理屈よりスッキリだぶひ！" },
+        { speakerId: "uemu", line: "まぁ、決勝まで勝てたのは意外だけど、俺たちで盛り上げようぜ" },
+        { speakerId: "shingo", line: "ぶひぶひ！ろまこ様のことを想像してスッキリだぶひ！" },
       ],
     },
   },
-
+//ここからが修正
   mito: {
     1: {
       rivalId: "teruzo",
